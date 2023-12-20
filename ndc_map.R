@@ -173,8 +173,8 @@ ndc_master_file_separator <- ','
 
 # Request codes by making the do_* variables TRUE.
 do_atc5 <- FALSE # If true, will request Anatomical-Therapeutic-Chemical (ATC) level 5 from RxNorm.
-do_atc4 <- TRUE # If true, will request Anatomical-Therapeutic-Chemical (ATC) level 4 from RxClass.
-do_va <- FALSE # If true, will request Veterans' Affairs Drug Classes from RxNorm.
+do_atc4 <- FALSE # If true, will request Anatomical-Therapeutic-Chemical (ATC) level 4 from RxClass.
+do_va <- TRUE # If true, will request Veterans' Affairs Drug Classes from RxNorm.
 do_attributes <- FALSE # If true, will request the drug's attributes (brand/generic, strength).
 do_snomedct <- FALSE # If true, will request SNOMED CT from RxNorm.
 do_meshpa <- FALSE # If true, will request MESH Pharmacological Actions from RxNorm.
@@ -184,7 +184,7 @@ do_ingredients <- FALSE # If true, will request the drug's ingredients from RxNo
 do_ingredients <- do_ingredients | do_atc5 | do_snomedct | do_meshpa
 
 # exec_label can be anything. It serves to isolate multiple runs of the script.
-exec_label <- 'atc4'
+exec_label <- 'vac'
 
 # The documentation (https://rxnav.nlm.nih.gov/TermOfService.html) allows no more than 20/sec. Let
 # us do 19/sec to be sure.
